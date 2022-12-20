@@ -1,0 +1,126 @@
+openapi: "3.0.3"
+info:
+  title: "Book_store API"
+  description: "Book_store API"
+  version: "1.0.0"
+servers:
+- url: "https://Book_store"
+paths:
+  /:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/plain:
+              schema:
+                type: "string"
+              examples:
+                Example#1:
+                  value: "Hello World!"
+  /json/gson:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/Map"
+  /json/jackson:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/Map"
+  /html-css-dsl:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/Function1"
+              examples:
+                text/html:
+                  description: "HTML document"
+                  value: ""
+  /html-dsl:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/Function1"
+              examples:
+                text/html:
+                  description: "HTML document"
+                  value: ""
+  /styles.css:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/css:
+              schema:
+                type: "string"
+  /protected/route/basic:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/plain:
+              schema:
+                type: "string"
+              examples:
+                Example#1:
+                  value: ""
+  /protected/route/form:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/plain:
+              schema:
+                type: "string"
+              examples:
+                Example#1:
+                  value: ""
+  /session/increment:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/plain:
+              schema:
+                type: "string"
+              examples:
+                Example#1:
+                  value: ""
+components:
+  schemas:
+    Map:
+      type: "object"
+      properties: {}
+    Function1:
+      type: "object"
+      properties: {}
